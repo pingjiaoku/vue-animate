@@ -20,17 +20,17 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from "vue";
+import { ref, computed, nextTick } from "vue";
 import type { AnimateDuration, AnimateTypes } from "./index";
 
-interface PropsType {
+interface AnimateProps {
   show: boolean;
   animate?: string | AnimateTypes;
   duration?: number | AnimateDuration;
   delay?: number;
   appear?: boolean;
 }
-const props = withDefaults(defineProps<PropsType>(), {
+const props = withDefaults(defineProps<AnimateProps>(), {
   animate: () => ({ in: "fadeIn", out: "fadeOut" }),
   duration: 0.5,
   delay: 0,
@@ -58,13 +58,10 @@ const is = (val: any, type: string) => {
   return Object.prototype.toString.call(val) === `[object ${type}]`;
 };
 
-const startAnimation = () => {
+const startAnimation = async () => {
   showF.value = false;
-  setTimeout(() => {
-    console.log("停止");
-
-    showF.value = true;
-  }, amtDuration.value / 2 + amtDuration.value * (props.repeat - 1));
+  await nextTick();
+  showF.value = true;
 };
 
 defineExpose({

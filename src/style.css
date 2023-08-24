@@ -1,0 +1,98 @@
+:root {
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  transition: all 0.25s;
+  box-sizing: border-box;
+}
+button:hover,
+input:hover {
+  border-color: #646cff;
+}
+button:focus {
+  outline: 2px auto;
+}
+
+input {
+  border: 1px solid #f0f0f0;
+  background: #fafafa;
+  width: 100%;
+  padding: 0 0.6em;
+  height: 32px;
+}
+
+#app {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.scroll-y {
+  overflow-y: auto;
+}
+.scroll-y::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-y::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+.scroll-y::-webkit-scrollbar-thumb:hover {
+  background: #f40;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.f-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.margin {
+  margin: 0.3em 0.6em;
+}
