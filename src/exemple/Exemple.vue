@@ -133,7 +133,7 @@
 import { ref, nextTick } from "vue";
 import { NTransition } from "../components/n-transition";
 import type { AnimateDuration, AnimateTypes } from "../components/n-transition";
-import NSwitch from "../components/n-switch/n-switch.vue";
+import NSwitch from "./components/n-switch.vue";
 import NButton from "./components/n-button.vue";
 import NCode from "./components/n-code.vue";
 
